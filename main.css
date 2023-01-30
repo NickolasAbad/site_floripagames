@@ -4,38 +4,71 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Valorant';
+    src: url('./fonts/Valorant.ttf') format('truetype');
+}
+
 header,
 section h2,
 section h3,
 form button {
-    font-family: 'Bungee', cursive;
+    font-family: 'Roboto', cursive;
+    font-weight: 600;
+}
+
+header h1 {
+    font-family: 'Valorant', cursive;
     font-weight: normal;
+    
 }
 
 body, input, textarea {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+#about {
+    background-color: #e04b58;
+}
+
+#contact {
+    background-color: #fff;
 }
 
 header {
+    background-color: #000000;
+    color: #fff;
+    height: 64px;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
     padding: 16px 0;
-    background-color: #182c61;
-    color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header nav li {
     display: inline;
-    margin-left: 16px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 header nav li a {
-    color: #ecf0f1;
+    color: #FFFBF5;
     text-decoration: none;
+    padding: 28px 16px 20px 16px;
+    display: inline
 }
 
 .container {
     max-width: 1280px;
-    width: 100%;
+    width: 100%;    
     margin: 0 auto;
 }
 
@@ -47,20 +80,12 @@ section .container {
 }
 
 section img {
-    height: 350px;
-}
-
-.brands-list img {
-    height: 24px;
-}
-
-.brands-list li {
-    display: inline;
-    margin-right: 8px;
+    height: 512px;
 }
 
 section .container {
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
 section {
@@ -72,37 +97,21 @@ section h2 {
 }
 
 section {
-    color: #182c61;
+    color: rgb(0, 0, 0);
 }
 
 section p {
     margin-bottom: 8px;
 }
 
-.storephoto {
-    margin-right: 32px;
-}
-
-.social-links img {
-    height: 24px;
-}
-
-.social-links li {
-    display: inline;
-    margin-right: 8px;
-}
-
-.social-links li a {
-    text-decoration: none;
-}
-
 #contact .container {
     display: block;
+    text-align: center;
 }
 
 .contact-methods {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 form input,
@@ -112,11 +121,14 @@ form button {
     width: 320px;
     margin-bottom: 8px;
     padding: 8px;
+    background-color: #ffffff;
+    border-radius: 16px;
 }
 
 form textarea {
     resize: none;
     height: 180px;
+    border-radius: 16px;
 }
 
 section h3 {
@@ -124,23 +136,50 @@ section h3 {
 }
 
 form button {
-    background-color: #182c61;
+    background-color: black;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 16px;
 }
 
 form button:hover {
-    background-color: #284596;
+    background-color: rgb(29, 27, 27);
 }
 
 input:focus, textarea:focus {
-    outline-color: #182c61;
+    outline-color: black;
 }
 
 footer {
-    background-color: #182c61;
+    background-color: black;
     color: #ecf0f1;
     padding: 16px;
     font-size: small;
+}
+
+.border:hover {
+    background-color: #e04b58;
+    color: #fff;
+    font-weight: 600;
+}
+.border{
+    position:relative;
+}
+
+.border:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s, left 0.3s;
+    width: 0;
+}
+.border:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
